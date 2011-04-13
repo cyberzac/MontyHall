@@ -1,0 +1,15 @@
+
+A simulation of the Monty Hall problem, http://en.wikipedia.org/wiki/Monty_Hall_problem.
+This implementation uses a fluent interface and a domain model.
+
+Problem description:
+Assume that you are attending a TV show where you can win money by picking the right box.
+The game show host shows you three boxes explaining that the money is in one of the boxes.
+He asks you to pick one of them. After you have picked box number one he opens box number three knowing that the money is not in this box.
+Now he turns to you and asks, do you want to change your mind, picking box number two instead of box number on?
+
+
+Your task:
+Write a small program in Java randomly simulating this event over and over again in the quest of answering following question.
+Do I stand a better chance to win if I change my mind?
+Depend only on the JDK.
