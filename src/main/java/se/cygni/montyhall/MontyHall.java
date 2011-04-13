@@ -27,8 +27,8 @@ public class MontyHall {
             }
         }
 
-        System.out.println(String.format("No change of mind, winning %d", winsNoChangeMind * 100 / laps));
-        System.out.println(String.format("Change of mind, winning      %d", winsChangedMind * 100 / laps));
+        System.out.println(String.format("No change of mind, winning %d%%", winsNoChangeMind * 100 / laps));
+        System.out.println(String.format("Change of mind, winning %d%%", winsChangedMind * 100 / laps));
     }
 
 

@@ -7,13 +7,38 @@
     <groupId>MontyHall</groupId>
     <artifactId>MontyHall</artifactId>
     <version>1.0</version>
+
+    <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.8.2</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
+    <build>
+        <finalName>montyhall</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>se.cygni.montyhall.MontyHall</mainClass>
+                        </manifest>
+                    </archive>
+
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
