@@ -46,7 +46,7 @@ public class BoxSet {
     /**
      * Check if the picked box is the winning one.
      *
-     * @return
+     * @return <code>true</code> if the picked box is the winning one, <code>false</code> otherwise.
      */
     public boolean isWinner() {
         return pickedBox == winningBox;
@@ -62,10 +62,10 @@ public class BoxSet {
     }
 
     /**
-     * Change your mind, that is if you picked a winning box, you change to an non winning
+     * Change your mind, that is if you picked a winning box, you change to an non winning box
      * and vice verse.
      *
-     * @return
+     * @return a new BoxSet with swapped picked box.,
      */
     public BoxSet changeMind() {
         Box changedBox = isWinner() ? null : winningBox;

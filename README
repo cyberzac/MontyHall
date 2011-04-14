@@ -1,1 +1,28 @@
-This file was created by IntelliJ IDEA 10.0.3 for binding GitHub repository
+
+A simulation of the Monty Hall problem, http://en.wikipedia.org/wiki/Monty_Hall_problem.
+This implementation uses a fluent interface and a domain model.
+
+To run:
+
+mvn package
+java -jar target/montyhall.jar
+
+The production code uses only the JDK, the test code depends on junit.
+
+
+------------------------------------------------------------------------------------------
+ The purpose of this test is to see how you design and write your code given a problem.
+ Try to use right level of OOP. The problem is a well known puzzle that you can read more about at http://en.wikipedia.org/wiki/Monty_Hall_problem .
+ Save reading the link if you do not want to know the answer until you have solved the problem.
+
+Problem description:
+Assume that you are attending a TV show where you can win money by picking the right box.
+The game show host shows you three boxes explaining that the money is in one of the boxes.
+He asks you to pick one of them. After you have picked box number one he opens box number three knowing that the money is not in this box.
+Now he turns to you and asks, do you want to change your mind, picking box number two instead of box number on?
+
+
+Your task:
+Write a small program in Java randomly simulating this event over and over again in the quest of answering following question.
+Do I stand a better chance to win if I change my mind?
+Depend only on the JDK.

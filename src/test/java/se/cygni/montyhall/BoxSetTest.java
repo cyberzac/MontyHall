@@ -12,17 +12,17 @@ public class BoxSetTest {
 
     /**
      * In this test we use 0 for the RandomSeed, the generated sequence will be:
-     * box2, box3
+     * box2, box3, box3... @see BoxTest#randomBox.
      * @throws Exception
      */
     @Before
     public void setUp() throws Exception {
         Box.setRandomSeed(0);
-        dut = new BoxSet();
+        dut = new BoxSet(); // The winningBox is now box2
     }
 
     /**
-     * Verify that only one box is the winning box
+     * Verify that only one box is the winning box.
      */
     @Test
     public void pickBox() {
@@ -39,13 +39,17 @@ public class BoxSetTest {
      */
     @Test
     public void shuffle() {
-        BoxSet shuffled = dut.shuffle();
-        BoxSet pickedBox2 = shuffled.pickBox(box2);
-        BoxSet pickedBox1 = shuffled.pickBox(box1);
+        BoxSet shuffeld = dut.shuffle();  // The winning box is now box3
+        BoxSet pickedBox2 = shuffeld.pickBox(box2);
+        BoxSet pickedBox1 = shuffeld.pickBox(box1);
         assertFalse("Box 1 should not the winning box", pickedBox1.isWinner());
         assertFalse("Box 2 is still the winning box", pickedBox2.isWinner());
-        BoxSet pickedBox3 = shuffled.pickBox(box3);
+        BoxSet pickedBox3 = shuffeld.pickBox(box3);
         assertTrue("Box 3 should be the winning box", pickedBox3.isWinner());
+        BoxSet shuffeld2 = shuffeld.shuffle(); // Winning box is now box3
+        assertTrue("Box 3 should be the winning box after a second shuffle", pickedBox3.isWinner());
+        BoxSet shuffeld3 = shuffeld2.shuffle(); // Winning box is now box1
+        assertTrue("Box 1 should be the winning box after a second shuffle", pickedBox3.isWinner());
     }
 
     /**
